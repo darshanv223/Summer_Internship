@@ -1,10 +1,10 @@
-const apiUrl="https://api.openweathermap.org/data/2.5/weather?q=London&appid=a0b670b3ffac6054a36805836faf89c6&units=metric";
+// const apiUrl="https://api.openweathermap.org/data/2.5/weather?q=London&appid=a0b670b3ffac6054a36805836faf89c6&units=metric";
 const city=document.querySelector(".search input");
 const btn=document.querySelector(".search button");
 const weatherIcon=document.querySelector(".weather-icon");
 
 async function checkWeather(city){
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a0b670b3ffac6054a36805836faf89c6&units=metric`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={api_id}&units=metric`);
     var data =await response.json();
     document.querySelector(".weather").style.display = "none";
     console.log(response.status);
